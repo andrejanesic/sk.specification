@@ -81,19 +81,19 @@ public interface IODriver {
     /**
      * Čita konfiguracioni fajl. Vraća null ukoliko ne postoji.
      *
-     * @param path Putanja na kojoj treba pročitati ili inicijalizovati konfiguracioni fajl u OS okruženju.
+     * @param absPath Apsolutna putanja na kojoj treba pročitati ili inicijalizovati konfiguracioni fajl u OS okruženju.
      * @return Potrebno je vratiti sadržinu konfiguracionog fajla (u JSON formatu) ili null ukoliko konfiguracioni fajl
      * ne postoji.
      */
-    String readConfig(String path);
+    String readConfig(String absPath);
 
     /**
      * Piše konfiguracioni fajl na zadatoj putanji.
      *
-     * @param json Sadržina konfiguracionog fajla u JSON formatu.
-     * @param path Putanja na kojoj treba pročitati ili inicijalizovati konfiguracioni fajl u OS okruženju.
+     * @param json    Sadržina konfiguracionog fajla u JSON formatu.
+     * @param absPath Apsolutna putanja na kojoj treba pročitati ili inicijalizovati konfiguracioni fajl u OS okruženju.
      */
-    void writeConfig(String json, String path);
+    void writeConfig(String json, String absPath);
 
     /**
      * Inicijalizuje strukturu skladišta na datoj putanji u korenski {@link DirectoryBuilder}. Ako je skladište prazno
